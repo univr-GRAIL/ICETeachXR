@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICE Digital Twin | ICETeachXR</title>
+  <meta name="description" content="The VR and AR digital twin of the ICE Laboratory at the University of Verona, a real-time replica of an Industry 4.0/5.0 production line.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="twin">
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-ice">ICE</span><span class="logo-teach">Teach</span><span class="logo-xr">XR</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link" data-page="home">Home</a></li>
+      <li><a href="ice-digital-twin.html" class="nav-link" data-page="twin">ICE Digital Twin</a></li>
+      <li><a href="vr-learning.html"   class="nav-link" data-page="vr">VR Learning</a></li>
+      <li><a href="robot-path-planning.html"   class="nav-link" data-page="ar">Robot Path Planning</a></li>
+      <li><a href="opportunities.html" class="nav-link" data-page="exploit">Opportunities</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sub">
+  <div class="hero-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="container hero-content">
+    <div class="hero-eyebrow">
+      <span class="badge badge-cyan">ICETeachXR</span>
+      <span class="badge badge-eu">Industry 4.0 / 5.0</span>
+    </div>
+    <h1 class="hero-title">
+      The ICE <span class="hi-cyan">Digital Twin</span>
+    </h1>
+    <p class="hero-subtitle">
+      A living, bidirectional replica of the Industrial Computer Engineering Laboratory, accessible via Virtual Reality from anywhere, or as an Augmented Reality overlay directly on the physical machines.
+    </p>
+    <div class="hero-actions">
+      <a href="vr-learning.html" class="btn btn-primary">VR Remote Learning</a>
+      <a href="robot-path-planning.html" class="btn btn-outline">Robot Path Planning</a>
+    </div>
+  </div>
+</section>
+
+<!-- THE ICE LAB -->
+<section>
+  <div class="container">
+    <div class="g11">
+      <div>
+        <span class="section-eye">The Physical Environment</span>
+        <h2 class="section-title">The ICE Laboratory</h2>
+        <p>The Industrial Computer Engineering (ICE) Lab at the University of Verona is a state-of-the-art demonstrator of Industry 4.0 and 5.0 technologies, created within the Italian Ministry-funded "Dipartimenti di Eccellenza" 2018-2022 project.</p>
+        <p>It serves simultaneously as a research infrastructure, a technology transfer hub, and the core teaching facility for the CEIS Master's degree in Computer Engineering for Intelligent Systems, attended by approximately 80 students from multiple countries each year.</p>
+        <p>Since 2018, the lab has supported over 100 technology transfer activities with regional manufacturing companies, resulting in more than 40 applied research projects and four university spinoff companies.</p>
+      </div>
+      <div>
+        <img class="img-cover" src="assets/images/photo-03.jpg" alt="ICE Lab production line: eight industrial stations including automated storage, conveyor line, cobot assembly, visual quality control, 3D printing and CNC milling">
+        <p style="font-size:.8rem;color:var(--text-muted);margin-top:10px;text-align:center;">Description placeholder text</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Lab capabilities grid -->
+    <h3 style="margin-bottom:28px;">Production Line Capabilities</h3>
+    <div class="g4">
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:10px;">🤖</div>
+        <h4 style="margin-bottom:6px;">Robotic Assembly</h4>
+        <p style="font-size:.85rem;color:var(--text-muted);margin:0;">Industrial robotic arms for automated assembly and manipulation tasks, integrated with the production planning system.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:10px;">📦</div>
+        <h4 style="margin-bottom:6px;">Autonomous Logistics</h4>
+        <p style="font-size:.85rem;color:var(--text-muted);margin:0;">Collaborative mobile robots (AMRs) navigate the lab autonomously to handle storage, transport, and logistics tasks.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:10px;">🔍</div>
+        <h4 style="margin-bottom:6px;">Quality Control</h4>
+        <p style="font-size:.85rem;color:var(--text-muted);margin:0;">Vision-based inspection stations with AI-driven anomaly detection, integrated with the manufacturing execution system.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:10px;">🖨️</div>
+        <h4 style="margin-bottom:6px;">Additive &amp; Subtractive Manufacturing</h4>
+        <p style="font-size:.85rem;color:var(--text-muted);margin:0;">3D printing and CNC machining stations operating within the reconfigurable production line.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:10px;">📡</div>
+        <h4 style="margin-bottom:6px;">IoT &amp; Sensor Network</h4>
+        <p style="font-size:.85rem;color:var(--text-muted);margin:0;">Industrial WiFi, wearables, and IoT control units providing continuous monitoring of human activity, machines, and processes.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:10px;">☁️</div>
+        <h4 style="margin-bottom:6px;">Digital Integration Hub</h4>
+        <p style="font-size:.85rem;color:var(--text-muted);margin:0;">Service-oriented architecture collecting heterogeneous data from all machines via OPC UA and storing it in the cloud for real-time and historical analysis.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:10px;">⚙️</div>
+        <h4 style="margin-bottom:6px;">Meta-MES</h4>
+        <p style="font-size:.85rem;color:var(--text-muted);margin:0;">A Manufacturing Execution System that orchestrates machine services through the Digital Integration Hub, enabling flexible production recipe management.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:10px;">📊</div>
+        <h4 style="margin-bottom:6px;">Siemens Digital Twin</h4>
+        <p style="font-size:.85rem;color:var(--text-muted);margin:0;">Industrial-grade digital twin providing simulation, monitoring, and process visualization capabilities for the full production line.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VR DIGITAL TWIN -->
+<section class="section-light">
+  <div class="container">
+    <div class="g12" style="gap:48px;">
+      <div>
+        <img class="img-cover" src="assets/images/screenshot-02.jpg" alt="VR screenshot: inside the virtual ICE Lab showing an ABB YUMI dual-arm robot with live machine info panel">
+      </div>
+      <div>
+        <span class="section-eye">VR Digital Twin</span>
+        <h2 class="section-title" style="margin-bottom:20px;">The Virtual Reality replica</h2>
+        <p>Running on <strong>Meta Quest 3</strong>, the VR application provides a fully navigable, real-time replica of the physical ICE Lab. Users move freely within the virtual space and observe machine states as they happen: transport lines running, mobile robots in motion, quality inspection in progress.</p>
+        <p>The VR twin communicates bidirectionally with the physical lab and the industrial digital twins, making it the ideal platform for remote learning without sacrificing fidelity.</p>
+        <ul class="feature-list" style="margin-top:24px;">
+          <li class="feature-item">
+            <div class="fi-icon">🌐</div>
+            <div class="fi-text">
+              <h4>Real-time synchronisation</h4>
+              <p>Machine states, production recipes, and robot positions are mirrored live between the physical lab and the virtual environment via MQTT.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="fi-icon">👋</div>
+            <div class="fi-text">
+              <h4>Gesture-based interaction</h4>
+              <p>The same gestural interface used in the AR app is replicated in VR, allowing users to control production recipes and inspect machines using hand gestures.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="fi-icon">🗺️</div>
+            <div class="fi-text">
+              <h4>Free spatial exploration</h4>
+              <p>Users navigate throughout the virtual lab, approaching any machine, reading operational data panels, and triggering machine actions.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="fi-icon">👥</div>
+            <div class="fi-text">
+              <h4>Collaborative sessions</h4>
+              <p>Multiple remote users can be present simultaneously, enabling team-based learning and teacher-guided tours of the virtual environment.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:48px;text-align:center;">
+      <h3 style="margin-bottom:20px;">System architecture</h3>
+      <img src="assets/images/diagram-01.png" alt="ICETeachXR system architecture: Physical Lab connected via cloud to Industrial SW, Industrial Digital Twin, and VIROO VR App" style="max-width:480px;width:100%;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.08);">
+      <p style="margin-top:10px;font-size:.8rem;color:var(--text-muted);">Description placeholder text</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI ASSISTANT -->
+<section class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Intelligent Interaction</span>
+      <h2 class="section-title">AI-powered virtual assistant</h2>
+      <p class="section-sub">Every user in the virtual ICE Lab can query a context-aware AI assistant by voice, getting real-time, machine-specific answers about the equipment they are looking at.</p>
+    </div>
+    <div class="g11">
+      <div>
+        <p>The virtual assistant integrates three components: a local speech-to-text engine, a gaze-based context detector, and a cloud LLM. When a user activates the push-to-talk interface, their voice is transcribed by <strong>Whisper.ai</strong> running locally on the headset, ensuring accuracy with technical industrial vocabulary. The <strong>GazeDetector</strong> simultaneously identifies which machine the user is looking at via a 20-metre raycast, capturing both the machine ID and its current operational status.</p>
+        <p style="margin-top:16px;">This context bundle (transcribed question, machine ID, and live machine state) is sent to <strong>Google Gemini</strong> via a Google Apps Script bridge. Gemini returns a technically precise, context-specific answer, which is then synthesised to speech using Google Translate TTS and played back through the avatar. Total round-trip latency is approximately 8 seconds.</p>
+        <ul class="feature-list" style="margin-top:24px;">
+          <li class="feature-item">
+            <div class="fi-icon">🎤</div>
+            <div class="fi-text">
+              <h4 style="color:white;">Push-to-talk, local transcription</h4>
+              <p style="color:rgba(255,255,255,.6);">Whisper.ai processes audio locally (up to 10 seconds), filtering background noise before passing validated text to the cognitive layer. No cloud dependency for the transcription step.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="fi-icon">👁️</div>
+            <div class="fi-text">
+              <h4 style="color:white;">Gaze-aware machine context</h4>
+              <p style="color:rgba(255,255,255,.6);">The system identifies which machine the user is looking at and bundles its live operational status with every query; Gemini answers about the specific equipment, not the lab in general.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="fi-icon">🤝</div>
+            <div class="fi-text">
+              <h4 style="color:white;">Personal AI and synchronised guide</h4>
+              <p style="color:rgba(255,255,255,.6);">Each user's personal assistant answers privately. The synchronised guide assistant delivers the same narration and events to all participants simultaneously across the VIROO multiplayer session.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="accent-strip">
+          <h3>Whisper.ai: Speech to Text</h3>
+          <p>Local inference on the headset. Handles technical industrial vocabulary more reliably than cloud STT in noisy lab environments, with no external dependency for the transcription step.</p>
+        </div>
+        <div class="accent-strip">
+          <h3>Google Gemini LLM</h3>
+          <p>Selected after comparative testing against ChatGPT: Gemini demonstrated superior ability to interpret real-time machine operational status and ICE Lab domain knowledge, with better response speed for this context.</p>
+        </div>
+        <div class="accent-strip">
+          <h3>Latency mitigation</h3>
+          <p>The current ~8-second response time is bridged by "thinking" animations and introductory phrases on the avatar. Future iterations will implement streaming responses to reduce perceived latency further.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AR DIGITAL TWIN -->
+<section>
+  <div class="container">
+    <div class="g21" style="gap:48px;">
+      <div>
+        <span class="section-eye">AR Digital Twin</span>
+        <h2 class="section-title" style="margin-bottom:20px;">Augmented Reality on the physical machines</h2>
+        <p>Running on <strong>Meta Quest 3</strong> in AR/passthrough mode, the application superimposes digital overlays directly onto the real machinery in the ICE Lab. The colour video passthrough renders the physical environment inside the headset while virtual elements are spatially anchored to the actual equipment.</p>
+        <p>For the robotic trajectory planning scenario, manipulability ellipsoids and trajectory visualisations are rendered on top of the physical JAKA ZU 5 robot arm, enabling students to connect path planning theory directly to the hardware in front of them, without losing the real-world reference.</p>
+        <ul class="feature-list" style="margin-top:24px;">
+          <li class="feature-item">
+            <div class="fi-icon">📌</div>
+            <div class="fi-text">
+              <h4>Spatially anchored visualisations</h4>
+              <p>Ellipsoids, trajectory paths, and data overlays are locked to their physical counterparts in the lab and remain in place as the user moves around the machine.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="fi-icon">📈</div>
+            <div class="fi-text">
+              <h4>Live kinematics data overlay</h4>
+              <p>Real-time robot joint states and manipulability metrics are displayed as floating panels above the relevant equipment via the ROS/URDF backend.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="fi-icon">🤖</div>
+            <div class="fi-text">
+              <h4>Trajectory exploration</h4>
+              <p>Students interact with trajectory representations anchored to the physical arm, exploring how target pose and joint configuration affect workspace reach and singularity avoidance.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <img class="img-cover img-cover-sq" src="assets/images/photo-07.jpg" alt="Students at the ICE Lab physical production line">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLABORATIVE ANNOTATION SYSTEM -->
+<section class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">New in ICETeachXR</span>
+      <h2 class="section-title">Collaborative educational content layer</h2>
+      <p class="section-sub">ICETeachXR extends the existing digital twin with a purpose-built system for creating and sharing learning modules.</p>
+    </div>
+    <div class="g3">
+      <div class="accent-strip">
+        <h3>Teacher authoring tools</h3>
+        <p>Professors create guided tasks, add annotations, and define step-by-step learning sequences directly within the virtual ICE Lab, both synchronously (live session) and asynchronously (pre-recorded module).</p>
+      </div>
+      <div class="accent-strip">
+        <h3>Cross-device availability</h3>
+        <p>The same virtual environment is available on Meta Quest 3 standalone (immersive VR), VIROO desktop client (PC), and Meta Quest 3 in AR/passthrough mode, delivering a consistent learning experience regardless of hardware availability.</p>
+      </div>
+      <div class="accent-strip">
+        <h3>VIROO platform integration</h3>
+        <p>The ICETeachXR platform is integrated with the VIROO package provided by MASTER-XR, ensuring compatibility with the wider ecosystem and enabling portability to other educational contexts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY STACK -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Technology</span>
+      <h2 class="section-title">Built on proven industrial standards</h2>
+      <p class="section-sub">The ICETeachXR platform combines cutting-edge XR development with robust industrial communication protocols.</p>
+    </div>
+    <div class="g11">
+      <div>
+        <h3 style="margin-bottom:20px;">XR &amp; Rendering</h3>
+        <div class="tech-cloud">
+          <span class="tech-tag">Unity 6000</span>
+          <span class="tech-tag">Meta Quest 3</span>
+          <span class="tech-tag">VIROO 3.0</span>
+          <span class="tech-tag">Quest 3 AR/passthrough</span>
+          <span class="tech-tag">Desktop VIROO client</span>
+          <span class="tech-tag">Hand gesture recognition</span>
+          <span class="tech-tag">Spatial anchors</span>
+          <span class="tech-tag">Multi-user XR</span>
+        </div>
+        <h3 style="margin-top:32px;margin-bottom:20px;">Connectivity &amp; Data</h3>
+        <div class="tech-cloud">
+          <span class="tech-tag">MQTT</span>
+          <span class="tech-tag">OPC UA</span>
+          <span class="tech-tag">Digital Integration Hub</span>
+          <span class="tech-tag">Cloud storage</span>
+          <span class="tech-tag">Industrial WiFi</span>
+          <span class="tech-tag">IoT sensors</span>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:20px;">Industrial Systems</h3>
+        <div class="tech-cloud">
+          <span class="tech-tag">Siemens Digital Twin</span>
+          <span class="tech-tag">Meta-MES</span>
+          <span class="tech-tag">Production recipe management</span>
+          <span class="tech-tag">Collaborative mobile robots</span>
+          <span class="tech-tag">Camera arrays</span>
+          <span class="tech-tag">Wearables &amp; inertial sensors</span>
+        </div>
+        <h3 style="margin-top:32px;margin-bottom:20px;">AI Assistant</h3>
+        <div class="tech-cloud">
+          <span class="tech-tag">Google Gemini LLM</span>
+          <span class="tech-tag">Whisper.ai STT</span>
+          <span class="tech-tag">Google Apps Script</span>
+          <span class="tech-tag">Google Translate TTS</span>
+          <span class="tech-tag">Gaze detection</span>
+          <span class="tech-tag">Push-to-talk</span>
+        </div>
+        <h3 style="margin-top:32px;margin-bottom:20px;">Research &amp; Evaluation</h3>
+        <div class="tech-cloud">
+          <span class="tech-tag">NASA-TLX</span>
+          <span class="tech-tag">Knowledge pre/post tests</span>
+          <span class="tech-tag">Kruskal-Wallis analysis</span>
+          <span class="tech-tag">Three-modality study design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Scientific Foundation</span>
+      <h2 class="section-title">Published research underpinning ICETeachXR</h2>
+    </div>
+    <div class="g11">
+      <div class="callout">
+        <h4>XR-Cyber-Physical Factory Integration</h4>
+        <p>Emporio M. et al. (2024). "Integration of Extended Reality with a Cyber-Physical Factory Environment and its Digital Twins." <em>Proceedings of the ACM on Human-Computer Interaction</em>, 8(EICS), 1-13.</p>
+      </div>
+      <div class="callout">
+        <h4>ICE Lab VR Demo</h4>
+        <p>Pintani D. et al. (2024). "ICELab Demo: an industrial digital-twin and simulator in VR." <em>Proceedings of the 30th ACM Symposium on Virtual Reality Software and Technology</em>, pp. 1-2.</p>
+      </div>
+      <div class="callout callout-purple">
+        <h4>Collaborative XR Design</h4>
+        <p>Pintani D., Caputo A., Mendes D., Giachetti A. (2025). "Layer-based management of collaborative interior design in extended reality." <em>Behaviour &amp; Information Technology</em>, 1-17.</p>
+      </div>
+      <div class="callout callout-purple">
+        <h4>Design Automation for Cyber-Physical Production Systems</h4>
+        <p>Lora M. et al. (2024). "Design Automation for Cyber-Physical Production Systems: Lessons Learned from the DeFacto Project." <em>DATE 2024</em>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Ready to explore the scenarios?</h2>
+    <p class="lead">See how the digital twin is used in actual educational settings, remotely via VR, or on-site via AR.</p>
+    <div class="contact-grid">
+      <a href="vr-learning.html" class="btn btn-primary">VR Remote Learning</a>
+      <a href="robot-path-planning.html" class="btn btn-outline">Robot Path Planning</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-wrap">
+          <img src="assets/images/logo.png" alt="ICETeachXR" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">Industrial Computer Engineering Teaching with eXtended Reality. An EU-funded research project at the University of Verona, Department of Engineering for Innovative Medicine.</p>
+        <span class="badge badge-eu">MASTER-XR</span>
+      </div>
+      <div>
+        <p class="footer-head">Pages</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ice-digital-twin.html">ICE Digital Twin</a></li>
+          <li><a href="vr-learning.html">VR Remote Learning</a></li>
+          <li><a href="robot-path-planning.html">Robot Path Planning</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-head">Contact &amp; Links</p>
+        <ul class="footer-links">
+          <li><a href="mailto:andrea.giachetti@univr.it">andrea.giachetti@univr.it</a></li>
+          <li><a href="http://intelligolabs.net" target="_blank" rel="noopener">intelligolabs.net</a></li>
+          <li><a href="https://www.dimi.univr.it/" target="_blank" rel="noopener">DIMI, University of Verona</a></li>
+          <li><a href="https://www.master-xr.eu/" target="_blank" rel="noopener">MASTER-XR Programme</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">Co-funded by the European Union. Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission. Neither the European Union nor the granting authority can be held responsible for them.</p>
+      <p class="footer-copy">© 2025 ICETeachXR, University of Verona</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

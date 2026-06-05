@@ -1,15 +1,324 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>ICETeachXR project site</title>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICETeachXR | Industrial Computer Engineering Teaching with eXtended Reality</title>
+  <meta name="description" content="An EU-funded project developing immersive XR training tools for Industry 4.0/5.0 education at the University of Verona.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
 
-<h1>ICETeachXR Project</h1>
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-ice">ICE</span><span class="logo-teach">Teach</span><span class="logo-xr">XR</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link" data-page="home">Home</a></li>
+      <li><a href="ice-digital-twin.html" class="nav-link" data-page="twin">ICE Digital Twin</a></li>
+      <li><a href="vr-learning.html"   class="nav-link" data-page="vr">VR Learning</a></li>
+      <li><a href="robot-path-planning.html"   class="nav-link" data-page="ar">Robot Path Planning</a></li>
+      <li><a href="opportunities.html" class="nav-link" data-page="exploit">Opportunities</a></li>
+    </ul>
+  </div>
+</nav>
 
+<!-- HERO -->
+<section class="hero hero-main">
+  <div class="hero-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="container hero-content">
+    <div class="hero-eyebrow">
+      <span class="badge badge-eu">MASTER-XR</span>
+      <span class="badge badge-cyan">EU-Funded</span>
+      <span class="badge badge-purple">University of Verona</span>
+    </div>
+    <h1 class="hero-title">
+      Teaching Industry 4.0<br>
+      through <span class="hi-cyan">Immersive XR</span>
+    </h1>
+    <p class="hero-subtitle">
+      ICETeachXR develops a collaborative VR/AR digital twin of a real production line,
+      enabling inclusive, remote, and on-site training for the next generation of industrial engineers.
+    </p>
+    <div class="hero-actions">
+      <a href="ice-digital-twin.html" class="btn btn-primary">Explore the Platform</a>
+      <a href="opportunities.html" class="btn btn-outline">Opportunities</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-value">VR + AR</div>
+        <div class="stat-label">Dual XR modalities</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">80+</div>
+        <div class="stat-label">Engineering students per year</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">4</div>
+        <div class="stat-label">Existing spinoff companies</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">100k€</div>
+        <div class="stat-label">EU-funded budget</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ABOUT THE PROJECT -->
+<section>
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-eye">About the Project</span>
+      <h2 class="section-title">A unique educational platform for Industry 4.0/5.0</h2>
+      <p class="section-sub" style="margin:0 auto;">ICETeachXR bridges the gap between cutting-edge industrial environments and scalable engineering education using the power of Extended Reality.</p>
+    </div>
+    <div class="g3">
+      <div class="card card-body reveal">
+        <div class="ci ci-cyan">🏭</div>
+        <h3 style="margin-bottom:12px;">The ICE Lab</h3>
+        <p class="text-muted" style="font-size:.9rem;">A fully-equipped Industry 4.0/5.0 demonstrator at the University of Verona, featuring a reconfigurable production line with mobile robots, robotic arms, quality control stations, and real-time IoT connectivity.</p>
+        <a href="ice-digital-twin.html" style="font-weight:600;font-size:.875rem;margin-top:8px;display:inline-block;">Discover the lab</a>
+      </div>
+      <div class="card card-body reveal">
+        <div class="ci ci-purple">🥽</div>
+        <h3 style="margin-bottom:12px;">The XR Platform</h3>
+        <p class="text-muted" style="font-size:.9rem;">A collaborative VR digital twin built on VIROO 3.0, accessible via Meta Quest 3 headset, desktop VIROO client, or Meta Quest 3 in AR/passthrough mode. Teachers create guided learning modules; students engage remotely or on-site with the same interactive environment.</p>
+        <a href="vr-learning.html" style="font-weight:600;font-size:.875rem;margin-top:8px;display:inline-block;">See it in action</a>
+      </div>
+      <div class="card card-body reveal">
+        <div class="ci ci-green">🎓</div>
+        <h3 style="margin-bottom:12px;">The Education</h3>
+        <p class="text-muted" style="font-size:.9rem;">Designed for the CEIS Master's degree in Computer Engineering for Intelligent Systems, the platform removes spatial constraints and makes high-tech lab resources accessible to all students, including remote learners.</p>
+        <a href="opportunities.html" style="font-weight:600;font-size:.875rem;margin-top:8px;display:inline-block;">Future plans</a>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- PHOTO GALLERY -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Inside the Lab</span>
+      <h2 class="section-title">The ICE Lab in action</h2>
+      <p class="section-sub">Real photos from ICETeachXR user sessions at the University of Verona.</p>
+    </div>
+    <div class="photo-strip">
+      <img src="assets/images/photo-04.jpg" alt="ICE Lab production line with robotic arms">
+      <img src="assets/images/photo-11.jpg" alt="Students wearing Meta Quest 3 headsets in a VR session">
+      <img src="assets/images/photo-09.jpg" alt="Students using gestural interaction in VR">
+      <img src="assets/images/photo-10.jpg" alt="Students wearing Meta Quest 3 headsets during a VR session at the ICE Lab">
+    </div>
+  </div>
+</section>
+
+<!-- NAV CARDS - 4 SECTIONS -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Explore</span>
+      <h2 class="section-title">What we are building</h2>
+      <p class="section-sub">From the physical lab to virtual reality, discover the four key dimensions of the ICETeachXR project.</p>
+    </div>
+    <div class="g4">
+      <a href="ice-digital-twin.html" class="card-nav reveal">
+        <div class="card-nav-body">
+          <div class="ci ci-cyan">🔗</div>
+          <h3 style="margin-bottom:10px;">ICE Digital Twin</h3>
+          <p style="font-size:.875rem;color:var(--text-muted);">The virtual replica of the ICE Lab: real-time machine states, bidirectional communication, and immersive navigation in Unity 6000 on Meta Quest 3 headset or desktop VIROO client.</p>
+        </div>
+        <div class="card-nav-footer"><span>Explore</span></div>
+      </a>
+      <a href="vr-learning.html" class="card-nav reveal">
+        <div class="card-nav-body">
+          <div class="ci ci-purple">🌐</div>
+          <h3 style="margin-bottom:10px;">VR Remote Learning</h3>
+          <p style="font-size:.875rem;color:var(--text-muted);">Students access the full virtual production line from anywhere in the world. Teacher-created tasks, gesture control, and guided learning modules, no physical presence required.</p>
+        </div>
+        <div class="card-nav-footer"><span>Explore</span></div>
+      </a>
+      <a href="robot-path-planning.html" class="card-nav reveal">
+        <div class="card-nav-body">
+          <div class="ci ci-blue">🤖</div>
+          <h3 style="margin-bottom:10px;">Robot Path Planning</h3>
+          <p style="font-size:.875rem;color:var(--text-muted);">Manipulability ellipsoids and real-time kinematics visualised on a JAKA ZU 5 robot arm. Students in the "Robotics, Vision and AI" course explore trajectory planning in immersive VR using ROS and URDF models.</p>
+        </div>
+        <div class="card-nav-footer"><span>Explore</span></div>
+      </a>
+      <a href="opportunities.html" class="card-nav reveal">
+        <div class="card-nav-body">
+          <div class="ci ci-green">🚀</div>
+          <h3 style="margin-bottom:10px;">Opportunities</h3>
+          <p style="font-size:.875rem;color:var(--text-muted);">Course deployment survey, spinoff feasibility evaluation, and planned publications.</p>
+        </div>
+        <div class="card-nav-footer"><span>Explore</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO PREVIEW -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Demo</span>
+      <h2 class="section-title">See the platform in action</h2>
+      <p class="section-sub">Videos and demos showcasing the VR digital twin and AR-augmented learning experience.</p>
+    </div>
+    <div class="g2">
+      <div>
+        <video class="media-real" controls poster="assets/images/photo-11.jpg">
+          <source src="assets/videos/ice-lab-demo-2.mp4" type="video/mp4">
+        </video>
+        <p style="margin-top:12px;font-size:.85rem;color:var(--text-muted);">Description placeholder text</p>
+      </div>
+      <div>
+        <img class="img-cover" src="assets/images/photo-08.jpg" alt="Students working in the ICE Lab production line">
+        <p style="margin-top:12px;font-size:.85rem;color:var(--text-muted);">Description placeholder text</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-eye">Team</span>
+      <h2 class="section-title">Key Personnel</h2>
+      <p class="section-sub" style="margin:0 auto;">ICETeachXR is led by a multidisciplinary team from the Department of Engineering for Innovative Medicine (DIMI), University of Verona.</p>
+    </div>
+    <div class="g3">
+      <div class="team-card reveal">
+        <div class="team-av">AG</div>
+        <p class="team-name">Prof. Andrea Giachetti</p>
+        <p class="team-role">Project Coordinator, XR &amp; HCI</p>
+        <p class="team-bio">Full Professor of Computer Engineering. Director of the CEIS Master's program and leader of the INTELLIGO-GRAIL research group (XR, HCI, visual computing). Author of 170+ publications.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-av">FF</div>
+        <p class="team-name">Prof. Franco Fummi</p>
+        <p class="team-role">Co-Investigator, ICE Lab Founder</p>
+        <p class="team-bio">Full Professor of Computer Architecture. Founder of the ICE Lab and the CEIS Master's degree. Director of the Engineering &amp; Physics section of DIMI. Co-founder of FACTORYAL s.r.l.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-av">FS</div>
+        <p class="team-name">Prof. Francesco Setti</p>
+        <p class="team-role">Co-Investigator, Computer Vision</p>
+        <p class="team-bio">Associate Professor. Leader of the INTELLIGO-ICV group in industrial computer vision and manufacturing automation. Co-founder of QUALYCO s.r.l. Author of 80+ papers and holder of several AI patents.</p>
+      </div>
+    </div>
+    <h3 style="margin:36px 0 20px;text-align:center;">Research Team</h3>
+    <div class="g2" style="max-width:68%;margin-left:auto;margin-right:auto;">
+      <div class="team-card reveal">
+        <div class="team-av">ME</div>
+        <p class="team-name">Marco Emporio</p>
+        <p class="team-role">XR Research Developer</p>
+        <p class="team-bio">Research engineer in the INTELLIGO-GRAIL group. Lead developer of the ICETeachXR VR application and VIROO 3.0 integration. First author of the XR/cyber-physical factory integration publication (ACM EICS 2024).</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-av">AC</div>
+        <p class="team-name">Ariel Caputo</p>
+        <p class="team-role">XR Researcher</p>
+        <p class="team-bio">Researcher in the INTELLIGO-GRAIL group. Works on collaborative XR systems and interaction design for industrial and educational applications. Co-author on XR integration and collaborative design publications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS & FUNDING -->
+<section class="section-dark">
+  <div class="container">
+    <div class="g11" style="align-items:center;gap:40px;">
+      <div>
+        <span class="section-eye">Funding &amp; Affiliation</span>
+        <h2 style="color:white;margin-bottom:16px;">Funded by the MASTER-XR programme</h2>
+        <p style="color:rgba(255,255,255,.68);margin-bottom:24px;">ICETeachXR is a project funded by MASTER-XR, a European programme supporting XR-based industrial robotics education.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span class="badge badge-eu">European Union, Horizon</span>
+          <span class="badge badge-cyan">MASTER-XR 2nd OC</span>
+          <span class="badge badge-purple">Challenge EC-10</span>
+        </div>
+      </div>
+      <div class="feature-list">
+        <div class="accent-strip">
+          <h3>University of Verona</h3>
+          <p>Founded 1982. 29,000+ students, ranked among the top 500 globally (THE 2024). 11th best Italian university in its size category (Censis 2024/25).</p>
+        </div>
+        <div class="accent-strip" style="margin-top:24px;">
+          <h3>DIMI: Dep. of Engineering for Innovative Medicine</h3>
+          <p>30 professors across Robotics, Cyber-physical Systems, Intelligent Systems, Bioengineering. Host of the ICE Lab and multiple EU-funded projects.</p>
+        </div>
+        <div class="accent-strip" style="margin-top:24px;">
+          <h3>INTELLIGO-GRAIL Research Group</h3>
+          <p>6-person team led by Prof. Giachetti, focusing on XR technologies, human-computer interaction, and visual computing for industrial applications.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Interested in partnering or learning more?</h2>
+    <p class="lead">We welcome collaborations from industry, academia, and educational institutions.</p>
+    <div class="contact-grid">
+      <a href="mailto:andrea.giachetti@univr.it" class="contact-chip">✉ andrea.giachetti@univr.it</a>
+      <a href="opportunities.html" class="btn btn-primary">Opportunities</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-wrap">
+          <img src="assets/images/logo.png" alt="ICETeachXR" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">Industrial Computer Engineering Teaching with eXtended Reality. An EU-funded research project at the University of Verona, Department of Engineering for Innovative Medicine.</p>
+        <span class="badge badge-eu">MASTER-XR</span>
+      </div>
+      <div>
+        <p class="footer-head">Pages</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ice-digital-twin.html">ICE Digital Twin</a></li>
+          <li><a href="vr-learning.html">VR Remote Learning</a></li>
+          <li><a href="robot-path-planning.html">Robot Path Planning</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-head">Contact &amp; Links</p>
+        <ul class="footer-links">
+          <li><a href="mailto:andrea.giachetti@univr.it">andrea.giachetti@univr.it</a></li>
+          <li><a href="http://intelligolabs.net" target="_blank" rel="noopener">intelligolabs.net</a></li>
+          <li><a href="https://www.dimi.univr.it/" target="_blank" rel="noopener">DIMI, University of Verona</a></li>
+          <li><a href="https://www.master-xr.eu/" target="_blank" rel="noopener">MASTER-XR Programme</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">Co-funded by the European Union. Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission. Neither the European Union nor the granting authority can be held responsible for them.</p>
+      <p class="footer-copy">© 2025 ICETeachXR, University of Verona</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

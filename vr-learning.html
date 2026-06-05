@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VR Remote Learning | ICETeachXR</title>
+  <meta name="description" content="Scenario 1: Remote VR learning with the ICE digital twin. Students access the virtual production line from anywhere using Meta Quest 3.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="vr">
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-ice">ICE</span><span class="logo-teach">Teach</span><span class="logo-xr">XR</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link" data-page="home">Home</a></li>
+      <li><a href="ice-digital-twin.html" class="nav-link" data-page="twin">ICE Digital Twin</a></li>
+      <li><a href="vr-learning.html"   class="nav-link" data-page="vr">VR Learning</a></li>
+      <li><a href="robot-path-planning.html"   class="nav-link" data-page="ar">Robot Path Planning</a></li>
+      <li><a href="opportunities.html" class="nav-link" data-page="exploit">Opportunities</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sub hero-vr">
+  <div class="hero-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="container hero-content">
+    <div class="hero-eyebrow">
+      <span class="badge badge-cyan">Educational Scenario 1</span>
+      <span class="badge badge-purple">Embedded &amp; IoT Systems Design</span>
+      <span class="badge badge-eu">Immersive VR, Desktop VR, In-person</span>
+    </div>
+    <h1 class="hero-title">
+      Remote Learning with<br>the <span class="hi-cyan">Virtual ICE Lab</span>
+    </h1>
+    <p class="hero-subtitle">
+      Students explore a fully interactive virtual replica of the ICE Lab across three modalities: immersive VR on Meta Quest 3, desktop VIROO client, or in-person guided tour, each compared in a formal user study.
+    </p>
+    <div class="hero-actions">
+      <a href="#how-it-works" class="btn btn-primary">How it works</a>
+      <a href="#results" class="btn btn-outline">Experimental Results</a>
+    </div>
+  </div>
+</section>
+
+<!-- MOTIVATION -->
+<section>
+  <div class="container">
+    <div class="g11">
+      <div>
+        <span class="section-eye">The Challenge</span>
+        <h2 class="section-title">Breaking spatial barriers in engineering education</h2>
+        <p>The ICE Lab is a world-class teaching resource, but it is physically constrained: limited floor space, high demand across multiple courses, and the practical impossibility of accommodating all 80+ master's students simultaneously during hands-on sessions.</p>
+        <p>For students who are geographically remote, have mobility disabilities, or simply cannot schedule on-site access, core parts of the curriculum become difficult or impossible to engage with at full depth.</p>
+        <p>ICETeachXR Scenario 1 addresses this directly: a high-fidelity VR replica of the lab, live-connected to the physical machines, that any student can access with a standalone headset from their home, dormitory, or any location worldwide.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="callout">
+          <h4>🌍 Accessible from anywhere</h4>
+          <p>No commute, no scheduling conflict, no physical disability barrier. The virtual lab is open whenever the student needs it.</p>
+        </div>
+        <div class="callout">
+          <h4>⚖️ Equitable learning</h4>
+          <p>Remote and on-campus students work through the same tasks with the same tools, measured by the same metrics.</p>
+        </div>
+        <div class="callout">
+          <h4>📏 Scalable to class size</h4>
+          <p>Dozens of students can use the virtual environment simultaneously, unlike the physical lab where only a handful can work at once.</p>
+        </div>
+        <div class="callout callout-purple">
+          <h4>🔬 Scientifically validated</h4>
+          <p>The platform is designed for rigorous comparative evaluation: VR-trained students vs. traditional instruction, with standardised UX and learning metrics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section-light" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Workflow</span>
+      <h2 class="section-title">From classroom to virtual lab: how it works</h2>
+      <p class="section-sub">The learning experience is structured in five phases, spanning teacher preparation to student evaluation.</p>
+    </div>
+    <div class="g11">
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <h4>Teacher designs the learning module</h4>
+            <p>Using the ICETeachXR authoring tools, the teacher creates a guided task within the virtual environment: placing annotations on machines, defining step-by-step instructions, setting checkpoints, and specifying which production sequences to practise.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <h4>Students receive the module on their headset</h4>
+            <p>The published module is pushed to each student's Meta Quest 3. Students are notified of the learning task and can begin at their own pace within the assigned window.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <h4>Immersive exploration of the virtual lab</h4>
+            <p>Students enter the virtual ICE Lab, move freely between stations, and read machine status information displayed in real time. The environment reflects the actual state of the physical lab at that moment.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-text">
+            <h4>Guided task execution with gesture control</h4>
+            <p>Following the teacher's annotations and guided steps, students interact with virtual machines using natural hand gestures, configuring production recipes, reading machine states, and observing production sequences in real time.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-text">
+            <h4>Automatic performance capture and evaluation</h4>
+            <p>After the session, students complete standardised questionnaires covering usability, cognitive load (NASA-TLX), and a knowledge pre/post test. Teachers review the aggregated results to assess learning outcomes across modalities.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <video class="media-real" controls poster="assets/images/photo-11.jpg" style="margin-bottom:16px;">
+          <source src="assets/videos/ice-lab-demo-2.mp4" type="video/mp4">
+        </video>
+        <img class="img-cover img-cover-sq" src="assets/images/photo-10.jpg" alt="Students wearing Meta Quest 3 headsets during a VR session at the ICE Lab">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT STUDENTS EXPERIENCE -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Student Experience</span>
+      <h2 class="section-title">Inside the virtual ICE Lab</h2>
+      <p class="section-sub">The VR environment is designed to be as informative and interactive as the physical lab, with specific enhancements for guided learning.</p>
+    </div>
+    <div class="g3">
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:12px;">🏭</div>
+        <h3 style="margin-bottom:10px;">Full lab replication</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">Every machine, conveyor, and robot present in the physical ICE Lab is reproduced in the virtual environment, with accurate spatial positioning and appearance.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:12px;">📡</div>
+        <h3 style="margin-bottom:10px;">Live machine states</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">Machine operational data (speed, status, production counts, alarms) is streamed in real time from the physical lab via MQTT, keeping the virtual twin perpetually up to date.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:12px;">✋</div>
+        <h3 style="margin-bottom:10px;">Hand gesture control</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">Students use natural hand gestures tracked by the Quest 3 to interact with control panels, select production recipes, and navigate menus, no controller required.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:12px;">📝</div>
+        <h3 style="margin-bottom:10px;">Spatial annotations</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">Teacher-placed notes, arrows, and instructional widgets appear anchored to relevant machines or areas, guiding students through the task without breaking immersion.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:12px;">👥</div>
+        <h3 style="margin-bottom:10px;">Synchronous collaboration</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">When desired, multiple students join the same virtual session simultaneously, enabling group exercises, peer observation, and live teacher guidance within the shared environment.</p>
+      </div>
+      <div class="card card-body">
+        <div style="font-size:1.8rem;margin-bottom:12px;">🎤</div>
+        <h3 style="margin-bottom:10px;">AI voice assistant</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">Students ask questions about any machine by voice via push-to-talk. Whisper.ai transcribes locally; Google Gemini generates a context-aware answer based on the machine being looked at and its live operational status.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DEMO -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Demo Material</span>
+      <h2 class="section-title">Videos and demonstrations</h2>
+    </div>
+    <div class="g3">
+      <div>
+        <video class="media-real" controls poster="assets/images/photo-11.jpg">
+          <source src="assets/videos/ice-lab-demo-3.mp4" type="video/mp4">
+        </video>
+        <p style="margin-top:12px;font-size:.85rem;color:var(--text-muted);">Description placeholder text</p>
+      </div>
+      <div>
+        <video class="media-real" controls poster="assets/images/photo-05.jpg">
+          <source src="assets/videos/ice-lab-demo-2.mp4" type="video/mp4">
+        </video>
+        <p style="margin-top:12px;font-size:.85rem;color:var(--text-muted);">Description placeholder text</p>
+      </div>
+      <div>
+        <img class="img-cover" src="assets/images/screenshot-02.jpg" alt="VR screenshot: inside the virtual ICE Lab showing an ABB YUMI robot with live machine info panel">
+        <p style="margin-top:12px;font-size:.85rem;color:var(--text-muted);">Description placeholder text</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIMENTAL RESULTS -->
+<section class="section-light" id="results">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Research Outcomes</span>
+      <h2 class="section-title">Experimental results</h2>
+      <p class="section-sub">A formal user study with 22 CEIS Master's students compared immersive VR, desktop VR, and in-person learning side by side. Ethics approval was granted by the University of Verona Research Ethics Committee (CARP) on February 11, 2026.</p>
+    </div>
+
+    <p style="margin-bottom:32px;">Participants were assigned to three groups: immersive VR on Meta Quest 3 (n=8), desktop VIROO client (n=8), and in-person guided visit (n=6). All groups completed a knowledge pre/post test on ICE Lab architecture, machine functions, and production workflows. Immersive VR achieved an 83.3% knowledge acquisition rate, a 16 percentage-point lead over both desktop VR (66.7%) and in-person (67.4%), with the difference confirmed statistically significant (Kruskal-Wallis H = 6.227, p = 0.04). NASA-TLX workload averaged 39.6 across VR groups, indicating low cognitive load, and ease of use was rated significantly higher for VR than traditional instruction (p = 0.01). The results support immersive XR as an effective and scalable alternative to physical lab visits.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px;">
+      <div class="callout" style="text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--accent);">83.3%</div>
+        <p style="margin:4px 0 0;font-size:.85rem;">Knowledge acquisition: immersive VR</p>
+      </div>
+      <div class="callout" style="text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--accent);">66.7%</div>
+        <p style="margin:4px 0 0;font-size:.85rem;">Knowledge acquisition: desktop VR</p>
+      </div>
+      <div class="callout" style="text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--accent);">67.4%</div>
+        <p style="margin:4px 0 0;font-size:.85rem;">Knowledge acquisition: in-person</p>
+      </div>
+      <div class="callout callout-purple" style="text-align:center;">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--purple-light);">p = 0.04</div>
+        <p style="margin:4px 0 0;font-size:.85rem;">Kruskal-Wallis H = 6.227 (significant)</p>
+      </div>
+    </div>
+
+    <div class="g3" style="margin-bottom:40px;">
+      <div style="text-align:center;">
+        <img src="assets/images/chart-01.png" alt="Violin plot: knowledge acquisition scores by modality (Immersive VR, Desktop VR, In presence)" style="width:100%;max-width:340px;border-radius:8px;">
+        <p style="margin-top:8px;font-size:.8rem;color:var(--text-muted);">Knowledge acquisition by modality</p>
+      </div>
+      <div style="text-align:center;">
+        <img src="assets/images/chart-02.png" alt="Violin plot: NASA-TLX cognitive load scores by modality (Immersive VR vs Desktop VR)" style="width:100%;max-width:340px;border-radius:8px;">
+        <p style="margin-top:8px;font-size:.8rem;color:var(--text-muted);">NASA-TLX cognitive load by modality</p>
+      </div>
+      <div style="text-align:center;">
+        <img src="assets/images/chart-03.png" alt="Violin plot: spatial awareness scores by modality (Immersive VR, Desktop VR, In presence)" style="width:100%;max-width:340px;border-radius:8px;">
+        <p style="margin-top:8px;font-size:.8rem;color:var(--text-muted);">Spatial awareness by modality</p>
+      </div>
+    </div>
+
+    <div class="g3">
+      <div class="callout">
+        <h4>First pilot: January 23, 2026</h4>
+        <p>An initial session during "Embedded and IoT Systems Design" (Prof. Fummi) had seven students use the standalone Meta Quest 3 app alongside a group visiting the physical lab. This session informed the design of the formal comparative study.</p>
+      </div>
+      <div class="callout">
+        <h4>Three-modality design</h4>
+        <p>No prior XR learning study in this context has simultaneously contrasted immersive VR headset, desktop VR client, and in-person lab visit. The desktop modality makes the comparison relevant for institutions without dedicated headset fleets.</p>
+      </div>
+      <div class="callout callout-purple">
+        <h4>Metrics collected</h4>
+        <div class="tech-cloud" style="margin-top:10px;">
+          <span class="tech-tag">Knowledge pre/post test</span>
+          <span class="tech-tag">NASA-TLX</span>
+          <span class="tech-tag">Ease of use rating</span>
+          <span class="tech-tag">Kruskal-Wallis test</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Explore the Robot Path Planning scenario</h2>
+    <p class="lead">The second educational scenario brings robotic trajectory planning into XR; students interact with a JAKA ZU 5 arm and visualise manipulability in real time.</p>
+    <div class="contact-grid">
+      <a href="robot-path-planning.html" class="btn btn-primary">Robot Path Planning</a>
+      <a href="ice-digital-twin.html" class="btn btn-outline">Back to Digital Twin</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-wrap">
+          <img src="assets/images/logo.png" alt="ICETeachXR" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">Industrial Computer Engineering Teaching with eXtended Reality. An EU-funded research project at the University of Verona, Department of Engineering for Innovative Medicine.</p>
+        <span class="badge badge-eu">MASTER-XR</span>
+      </div>
+      <div>
+        <p class="footer-head">Pages</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ice-digital-twin.html">ICE Digital Twin</a></li>
+          <li><a href="vr-learning.html">VR Remote Learning</a></li>
+          <li><a href="robot-path-planning.html">Robot Path Planning</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-head">Contact &amp; Links</p>
+        <ul class="footer-links">
+          <li><a href="mailto:andrea.giachetti@univr.it">andrea.giachetti@univr.it</a></li>
+          <li><a href="http://intelligolabs.net" target="_blank" rel="noopener">intelligolabs.net</a></li>
+          <li><a href="https://www.dimi.univr.it/" target="_blank" rel="noopener">DIMI, University of Verona</a></li>
+          <li><a href="https://www.master-xr.eu/" target="_blank" rel="noopener">MASTER-XR Programme</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">Co-funded by the European Union. Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission. Neither the European Union nor the granting authority can be held responsible for them.</p>
+      <p class="footer-copy">© 2025 ICETeachXR, University of Verona</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

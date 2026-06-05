@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotic Path Planning in XR | ICETeachXR</title>
+  <meta name="description" content="Educational Scenario 2: Interactive robotic trajectory planning in VR/AR. Students learn manipulability and kinematic optimisation using a JAKA ZU 5 robot arm in the ICE Lab digital twin.">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="ar">
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-ice">ICE</span><span class="logo-teach">Teach</span><span class="logo-xr">XR</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"        class="nav-link" data-page="home">Home</a></li>
+      <li><a href="ice-digital-twin.html" class="nav-link" data-page="twin">ICE Digital Twin</a></li>
+      <li><a href="vr-learning.html"   class="nav-link" data-page="vr">VR Learning</a></li>
+      <li><a href="robot-path-planning.html"   class="nav-link" data-page="ar">Robot Path Planning</a></li>
+      <li><a href="opportunities.html" class="nav-link" data-page="exploit">Opportunities</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sub hero-ar">
+  <div class="hero-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="container hero-content">
+    <div class="hero-eyebrow">
+      <span class="badge badge-purple">Educational Scenario 2</span>
+      <span class="badge badge-cyan">Robotics, Vision and AI course</span>
+      <span class="badge badge-purple">Meta Quest 3: VR / AR passthrough</span>
+    </div>
+    <h1 class="hero-title">
+      Robotic Trajectory Planning<br>
+      in <span class="hi-purple">VR and AR</span>
+    </h1>
+    <p class="hero-subtitle">
+      Students interactively plan and optimise robot arm trajectories inside a VR digital twin of the ICE Lab,
+      with real-time manipulability visualisation and a ROS-powered computational backend,
+      making abstract kinematic concepts tangible and safe to explore.
+    </p>
+    <div class="hero-actions">
+      <a href="#how-it-works" class="btn btn-primary">How it works</a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section>
+  <div class="container">
+    <div class="g11">
+      <div>
+        <span class="section-eye">Overview</span>
+        <h2 class="section-title">Teaching robot kinematics through hands-on XR</h2>
+        <p>Robotic trajectory planning and manipulability are notoriously difficult to teach in a traditional classroom: the mathematics is abstract, and access to a live robot for safe experimentation is constrained by safety, time, and equipment availability.</p>
+        <p>ICETeachXR Educational Scenario 2, designed for the <strong>"Robotics, Vision and AI"</strong> course taught by Prof. Francesco Setti and Prof. Riccardo Muradore, places students directly in front of a virtual <strong>JAKA ZU 5 6-DoF robotic manipulator</strong>. They interactively define target poses, observe computed trajectories, and explore how path choices affect manipulability and safety, with instant visual feedback and no risk to equipment or personnel.</p>
+        <p>The application runs in <strong>standalone VR on Meta Quest 3</strong>, with an optional AR passthrough mode that overlays the virtual robot and trajectory visualisation onto the physical lab environment.</p>
+      </div>
+      <div>
+        <video class="media-real" controls poster="assets/images/poster-01.jpg">
+          <source src="assets/videos/ice-lab-demo-3.mp4" type="video/mp4">
+        </video>
+        <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:12px;background:var(--light);border-radius:10px;padding:14px 16px;">
+            <span style="font-size:1.4rem;">🤖</span>
+            <div>
+              <strong style="font-size:.875rem;">JAKA ZU 5: 6-DoF robotic arm</strong>
+              <p style="font-size:.8rem;color:var(--text-muted);margin:0;">A real collaborative manipulator in the ICE Lab, reproduced in the virtual twin with full CAD-based fidelity.</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--light);border-radius:10px;padding:14px 16px;">
+            <span style="font-size:1.4rem;">📐</span>
+            <div>
+              <strong style="font-size:.875rem;">Manipulability ellipsoid overlay</strong>
+              <p style="font-size:.8rem;color:var(--text-muted);margin:0;">3D visual overlays show kinematic performance at every step of a planned trajectory in real time.</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--light);border-radius:10px;padding:14px 16px;">
+            <span style="font-size:1.4rem;">⚙️</span>
+            <div>
+              <strong style="font-size:.875rem;">ROS + URDF backend</strong>
+              <p style="font-size:.8rem;color:var(--text-muted);margin:0;">Accurate inverse kinematics and time-parametrised motion computed by an external ROS server using URDF robot models.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section-light" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Workflow</span>
+      <h2 class="section-title">From abstract kinematics to interactive 3D exploration</h2>
+      <p class="section-sub">The entire scenario takes place in the pre-execution planning phase: students learn by designing safe paths, not by running the robot live.</p>
+    </div>
+    <div class="g11">
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <h4>Introductory briefing</h4>
+            <p>A 5-minute presentation introduces basic commands, how the system computes trajectories for a 6-DoF robot across the full joint space, trajectory analysis based on manipulability ellipsoids, and fundamentals of inverse kinematics.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <h4>Enter the VR environment</h4>
+            <p>Students put on a Meta Quest 3 headset and are positioned in front of the JAKA ZU 5 robotic arm inside the virtual ICE Lab. Spatial guidance immediately highlights invalid zones: singularities near the robot's base, intersections with the worktable, and areas exceeding maximum reach.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <h4>Define a target pose interactively</h4>
+            <p>The student moves a virtual target through 3D space using gestural interaction. The system provides real-time spatial guidance, flagging invalid configurations before a trajectory is committed. Once a valid pose is selected, the student requests trajectory computation from the ROS backend.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-text">
+            <h4>Visualise manipulability along the path</h4>
+            <p>Before any robot motion, the system overlays manipulability ellipsoids along the proposed path, dynamically scaling, orienting, and colour-shifting from red to green to indicate kinematic performance at each step. A real-time metrics panel displays average manipulability, joint margin, peak velocity, and torque magnitude.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-text">
+            <h4>Refine and compare trajectories</h4>
+            <p>Students iterate freely: adjust the target pose, re-plan the path, and observe how the manipulability indicators change. A built-in scorecard compares the current trajectory against a baseline, encouraging students to optimise safety and performance metrics through guided discovery.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img class="img-cover" src="assets/images/photo-06.jpg" alt="ICE Lab production floor including the collaborative robotics cell">
+        <img class="img-cover img-cover-sq" src="assets/images/photo-07.jpg" alt="Students working at the ICE Lab robotic arm station" style="margin-top:16px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY CAPABILITIES -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eye">Key Capabilities</span>
+      <h2 class="section-title">What the application delivers</h2>
+    </div>
+    <div class="g3">
+      <div class="card card-body reveal">
+        <div class="ci ci-purple" style="margin-bottom:14px;">📐</div>
+        <h3 style="margin-bottom:10px;">Manipulability ellipsoid overlay</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">Dynamic 3D ellipsoids overlaid on the robot trajectory, aligned to end-effector task space. Size and shape encode kinematic dexterity; a colour-coded scalar index indicates proximity to singularity conditions; principal-direction arrows show preferred motion directions.</p>
+      </div>
+      <div class="card card-body reveal">
+        <div class="ci ci-cyan" style="margin-bottom:14px;">⚙️</div>
+        <h3 style="margin-bottom:10px;">Real-time kinematic computation</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">The VR environment communicates with an external ROS server powered by accurate URDF models of the JAKA ZU 5. Inverse kinematics and time-parametrised trajectory generation provide immediate visual feedback on any pose the student requests.</p>
+      </div>
+      <div class="card card-body reveal">
+        <div class="ci ci-blue" style="margin-bottom:14px;">🚧</div>
+        <h3 style="margin-bottom:10px;">Workspace safety visualisation</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">Virtual fences and clearance overlays mark workspace zones and highlight risks of self-collision and obstacles. The closest-pair link minimum distance is shown, making abstract safety margins spatially intuitive.</p>
+      </div>
+      <div class="card card-body reveal">
+        <div class="ci ci-green" style="margin-bottom:14px;">📊</div>
+        <h3 style="margin-bottom:10px;">Quantitative metrics panel</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">A floating billboard panel displays real-time values: average manipulability, joint margin, fence clearance, peak velocity, and torque magnitude. Students see the numbers and the visual simultaneously, reinforcing the link between theory and physical reality.</p>
+      </div>
+      <div class="card card-body reveal">
+        <div class="ci ci-purple" style="margin-bottom:14px;">🥽</div>
+        <h3 style="margin-bottom:10px;">VR and AR passthrough modes</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">The scenario runs in standalone VR on Meta Quest 3 standalone or connected to PC. An optional AR passthrough mode overlays the virtual robot and trajectory visualisation directly onto the physical ICE Lab environment, blending digital learning with physical context.</p>
+      </div>
+      <div class="card card-body reveal">
+        <div class="ci ci-cyan" style="margin-bottom:14px;">🏆</div>
+        <h3 style="margin-bottom:10px;">Trajectory comparison scorecard</h3>
+        <p style="font-size:.875rem;color:var(--text-muted);">A scorecard compares the current trajectory against a baseline using the metrics already visible in the real-time panel, encouraging students to refine their paths through guided discovery rather than direct instruction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Interested in the full platform?</h2>
+    <p class="lead">Explore the underlying digital twin technology or find out how ICETeachXR can be adapted to your context.</p>
+    <div class="contact-grid">
+      <a href="ice-digital-twin.html" class="btn btn-primary">The ICE Digital Twin</a>
+      <a href="opportunities.html" class="btn btn-outline">Opportunities</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-wrap">
+          <img src="assets/images/logo.png" alt="ICETeachXR" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">Industrial Computer Engineering Teaching with eXtended Reality. An EU-funded research project at the University of Verona, Department of Engineering for Innovative Medicine.</p>
+        <span class="badge badge-eu">MASTER-XR</span>
+      </div>
+      <div>
+        <p class="footer-head">Pages</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ice-digital-twin.html">ICE Digital Twin</a></li>
+          <li><a href="vr-learning.html">VR Remote Learning</a></li>
+          <li><a href="robot-path-planning.html">Robot Path Planning</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-head">Contact &amp; Links</p>
+        <ul class="footer-links">
+          <li><a href="mailto:andrea.giachetti@univr.it">andrea.giachetti@univr.it</a></li>
+          <li><a href="http://intelligolabs.net" target="_blank" rel="noopener">intelligolabs.net</a></li>
+          <li><a href="https://www.dimi.univr.it/" target="_blank" rel="noopener">DIMI, University of Verona</a></li>
+          <li><a href="https://www.master-xr.eu/" target="_blank" rel="noopener">MASTER-XR Programme</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">Co-funded by the European Union. Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission. Neither the European Union nor the granting authority can be held responsible for them.</p>
+      <p class="footer-copy">© 2025 ICETeachXR, University of Verona</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
