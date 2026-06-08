@@ -167,8 +167,7 @@
     </div>
     <div style="margin-top:48px;text-align:center;">
       <h3 style="margin-bottom:20px;">System architecture</h3>
-      <img src="assets/images/diagram-01.png" alt="ICETeachXR system architecture: Physical Lab connected via cloud to Industrial SW, Industrial Digital Twin, and VIROO VR App" style="max-width:480px;width:100%;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.08);">
-      <p style="margin-top:10px;font-size:.8rem;color:var(--text-muted);">Description placeholder text</p>
+      <img src="assets/images/diagram-01.png" alt="ICETeachXR system architecture: Physical Lab connected via cloud to Industrial SW, Industrial Digital Twin, and VIROO VR App" style="max-width:480px;width:100%;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.08);display:block;margin:0 auto;">
     </div>
   </div>
 </section>
@@ -184,7 +183,7 @@
     <div class="g11">
       <div >
         <p style="color:rgba(255,255,255,1);">The virtual assistant integrates three components: a local speech-to-text engine, a gaze-based context detector, and a cloud LLM. When a user activates the push-to-talk interface, their voice is transcribed by <strong>Whisper.ai</strong> running locally on the headset, ensuring accuracy with technical industrial vocabulary. The <strong>GazeDetector</strong> simultaneously identifies which machine the user is looking at via a 20-metre raycast, capturing both the machine ID and its current operational status.</p>
-        <p style="color:rgba(255,255,255,1);">This context bundle (transcribed question, machine ID, and live machine state) is sent to <strong>Google Gemini</strong> via a Google Apps Script bridge. Gemini returns a technically precise, context-specific answer, which is then synthesised to speech using Google Translate TTS and played back through the avatar. Total round-trip latency is approximately 8 seconds.</p>
+        <p style="color:rgba(255,255,255,1);">This context bundle (transcribed question, machine ID, and live machine state) is sent to <strong>Google Gemini</strong> via a Google Apps Script bridge. Gemini returns a technically precise, context-specific answer, which is then converted to speech using Google Translate TTS and played back through the avatar. Total round-trip latency is approximately 8 seconds.</p>
         <ul class="feature-list" style="margin-top:24px;">
           <li class="feature-item">
             <div class="fi-icon">🎤</div>
